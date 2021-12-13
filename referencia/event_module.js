@@ -6,10 +6,10 @@ class MyEmiter extends EventEmitter {}
 const myEmiter = new MyEmiter()
 
 //Creamos el listener
-myEmiter.on('evento', () => console.log('Evento recibido...'))
+myEmiter.on('evento', (data) => console.log('Evento recibido...', data))
 
-myEmiter.emit('evento')
-myEmiter.emit('evento')
-myEmiter.emit('evento')
-myEmiter.emit('evento')
-myEmiter.emit('evento')
+myEmiter.emit('evento', {id: 1, msg: "Hola log"})
+// myEmiter.emit('evento')
+// myEmiter.emit('evento')
+// myEmiter.emit('evento')
+// myEmiter.emit('evento')
